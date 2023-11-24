@@ -1,0 +1,23 @@
+
+spring:
+  cloud:
+    azure:
+# Properties like spring.cloud.azure.credential.client-id are global properties.
+# Properties like spring.cloud.azure.active-directory.credential.client-id are Microsoft Entra ID properties.
+# If Microsoft Entra ID properties is not configured, global properties will be used.
+#      credential:
+#        client-id:
+#        client-secret:
+#      profile:
+#        tenant-id:
+      active-directory:
+        enabled: true
+        credential:
+          client-id: 820bbae4-5a37-4106-8b62-e2b55daa8809
+          client-secret: 6Yi8Q~nkHFgAeXwonZdYUfpX.s5hwvNAQT~Avb_Q
+        profile:
+          tenant-id: e714dd14-6bf0-4e1c-8c72-d21fa8786387
+        user-group:
+          allowed-group-names: group1,group2
+        redirect-uri-template: http://localhost:8080/
+#        jwt-connect-timeout: 5000
